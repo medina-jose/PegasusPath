@@ -1,0 +1,90 @@
+<div id="ghettoImSorry"></div>
+
+<div class="search">
+
+  <div class="card mb-4" style="padding: 20px;">
+    <h1>Search for an Event</h1>
+    <br>
+    <input type="text" [(ngModel)]="term" class="form-control" placeholder="Search for an event...">
+  </div>
+</div>
+
+<br>
+<br>
+<h1>Active Events</h1>
+<br>
+<hr>
+<div id="events">
+
+  <div *ngIf="events?.length > 0" class="container">
+    <div *ngFor="let event of events | filter:term" class="collection">
+      <div class="card mb-4">
+    <div *ngIf="events?.length > 0" class="container">
+      <div *ngFor="let event of events | filter:term" class="collection">
+          <div class="card mb-4">
+            <br>
+            <h2>{{event.name}}</h2>
+            <br>
+            <table>
+              <tr>
+              <button class="upvote" (click)="likeUpdate(event)">🌟</button>　{{event.like}}
+              　　
+              <button class="downvote" (click)="dislikeUpdate(event)">💥</button>　{{event.dislike}}
+              </tr>
+              </table>
+        <br>
+        <h2>{{event.name}}</h2>
+        <br>
+        <table>
+          <tr>
+            <button class="btn btn-primary" (click)="flyToOnClick(event)">Fly Here!</button>
+
+          </tr>
+        </table>
+        <br>
+      </div>
+    </div>
+
+    <br>
+  </div>
+</div>
+
+
+<div *ngIf="firebaseService.user | async; then authenticated else guest"></div>
+
+<ng-template #guest>
+  <div id="floatingwhatever">
+    <h6>Welcome, Guest!</h6>
+    <h6>Please login to get started.</h6>
+  </div>>
+</ng-template>
+
+<ng-template #authenticated>
+  <div id="floatingwhatever">
+
+    <form [formGroup]="eventForm" (ngSubmit)="registerEvent()">
+      <div *ngIf="latitude && longitude; then point else nopoint">
+      </div>
+      <ng-template #point>
+        <h6>Point selected on map</h6>
+        <div class="form-group">
+          <input type="name" id="name" class="form-control" formControlName="name" placeholder="Name of event">
+        </div>
+        <div class="form-group" style="display: none;">
+          <input type="latitude" id="latitude" class="form-control" formControlName="latitude">
+        </div>
+        <div class="form-group" style="display: none;">
+          <input type="longitude" id="longitude" class="form-control" formControlName="longitude">
+        </div>
+        <div align="center">
+          <button [disabled]="!eventForm.valid" type="submit" class="btn btn-primary">Add Event</button>
+        </div>
+      </ng-template>
+      <ng-template #nopoint>
+        <h6>Hi, {{ user.firstname }} {{ user.lastname }}!</h6>
+        <h6>Click where you would like to drop a pin.</h6>
+      </ng-template>
+
+    </form>
+  </div>
+</ng-template>

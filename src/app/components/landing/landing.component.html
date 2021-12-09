@@ -1,0 +1,177 @@
+<div id="main">
+  <div class="header">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <img [src]="images[0]" alt="Random first slide" class="images">
+        <div class="carousel-caption">
+          <h3>Get around campus easily</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[3]" alt="Random second slide" class="images">
+        <div class="carousel-caption">
+          <h3>Avoid the crowds</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide" class="images">
+        <div class="carousel-caption">
+          <h3>Easy to use interface</h3>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <div class="bg-dark" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <br>
+          <h2 class="section-heading text-white">Hassle-free Campus Maps</h2>
+          <hr class="light my-4">
+          <p class="text-faded mb-4">See where all the annoying people are around campus! Get around campus a lot quicker!</p>
+          <button class="btn btn-light btn-xl" (click)="changeComponent('HomeComponent')">Get Started!</button>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Instructions</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+            <img src="assets/1.png" class="testimonials_images">
+            <h3 class="mb-3">1. Select a Point</h3>
+            <p class="text-muted mb-0">Select a point on the map that you wish to create an obstacle at.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+            <img src="assets/2.png" class="testimonials_images">
+            <h3 class="mb-3">2. Description</h3>
+            <p class="text-muted mb-0">Type in a quick description of the obstacle or event so others will know what is going on.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+            <img src="assets/3.png" class="testimonials_images">
+            <h3 class="mb-3">3. Like or Dislike</h3>
+            <p class="text-muted mb-0">Like or dislike events to rate the obstacle or event and help other knights!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+            <img src="assets/4.png" class="testimonials_images">
+            <h3 class="mb-3">4. Delete</h3>
+            <p class="text-muted mb-0">The event will automatically delete itself when it reaches 100 dislikes or can be manually deleted by the creator.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+
+  <div class="bg-dark text-white">
+    <br>
+    <br>
+    <br>
+    <div class="container text-center">
+      <h2 class="mb-4">Testimonials</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="assets/woman2.png" class="testimonials_images">
+          <blockquote class="quote text-center">
+            <p class="mb-0">"I will recommend you to my colleagues. Pegasus Path should be nominated for service of the year. I'd be lost
+              without Pegasus Path. Without Pegasus Path, we would have gone bankrupt by now."</p>
+            <footer class="blockquote-footer">
+              <cite title="Source Title">Christie I</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="col-sm">
+          <img src="assets/man1.png" class="testimonials_images">
+          <blockquote class="quote text-center">
+            <p class="mb-0">"Thank you so much for your help. Wow what great service, I love it! I'd be lost without Pegasus Path."</p>
+            <footer class="blockquote-footer">
+              <cite title="Source Title">Rodolph C.</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="col-sm">
+          <img src="assets/woman1.png" class="testimonials_images">
+          <blockquote class="quote text-center">
+            <p class="mb-0">"It fits our needs perfectly. I would like to personally thank you for your outstanding product. I will refer
+              everyone I know. I don't know what else to say."</p>
+            <footer class="blockquote-footer">
+              <cite title="Source Title">Catharina M.</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="col-sm">
+          <img src="assets/man2.png" class="testimonials_images">
+          <blockquote class="quote text-center">
+            <p class="mb-0">"If you aren't sure, always go for Pegasus Path. Pegasus Path impressed me on multiple levels. Man, this thing
+              is getting better and better as I learn more about it."</p>
+            <footer class="blockquote-footer">
+              <cite title="Source Title">Jack F.</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <br>
+          <br>
+          <h2 class="section-heading">Feedback!</h2>
+          <hr class="my-4">
+          <p class="mb-5">If you would like to provide feedback to report problems or feature requests about our application, give us a call
+            or send us an email!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+          <p>123-456-6789</p>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+          <p>
+            <a href="mailto:feedbackl@pegasuspath.com">feedback@pegasuspath.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

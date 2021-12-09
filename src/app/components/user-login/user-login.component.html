@@ -1,0 +1,30 @@
+<div id="bg"></div>
+<br>
+<br>
+<br>
+<br>
+  <div class="mid">
+    <h4>Login with Email</h4>
+    <br>
+    <form [formGroup]="userForm" (ngSubmit)="loginUser()">
+
+      <div class="form-group">
+        <input type="email" id="email" class="form-control" formControlName="email" placeholder="Email">
+        <div *ngIf="formErrors.email" class="notification is-danger">
+          {{ formErrors.email }}
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
+        <div *ngIf="formErrors.password" class="notification is-danger">
+          {{ formErrors.password }}
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="prim" [disabled]="!userForm.valid">Login</button>
+      　　
+      <!-- <button class="btn btn-primary" [routerLink]="['/user-register']" >New User?</button> -->
+      <button class="prim" (click)="this.createComponent.emit('RegisterComponent')">New User?</button>
+
+    </form>
+  </div>

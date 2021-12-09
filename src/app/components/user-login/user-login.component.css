@@ -1,0 +1,25 @@
+#bg{
+  background-image:url("https://coderspaghetti.files.wordpress.com/2015/07/starmap03b.jpg");
+  width:100vw;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.mid{
+  color:#fff;
+  width:40vw;
+  left:30vw;
+  top:29vh;
+  position:fixed;
+  text-align:center;
+  border-radius:6px;
+  background-color:#495159;
+  padding:20px;
+  z-index:10;
+
+}
+
+h4{
+  font-family:Pattaya;
+}

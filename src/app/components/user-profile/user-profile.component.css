@@ -1,0 +1,60 @@
+
+#eventsList {
+  overflow-y: scroll;
+  height: 45vh;
+  width:90vw;
+  left:7vw;
+  position:relative;
+}
+
+.bottom {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: 20pt;
+  text-align: center;
+}
+
+
+.del{
+  bottom:0px;
+  position:relative;
+}
+
+.welcome{
+  color:#fff;
+  width:50vw;
+  left:25vw;
+  height:30vh;
+  top:0px;
+  position:relative;
+}
+
+.welcome:after {
+  background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 35px 35px;
+  content: " ";
+  display: block;
+  right: 0px;
+  position: absolute;
+  top: 22vh;
+  width: 50vw;
+  height: 32px;
+  padding-bottom:0px;
+}
+
+
+#ghettoimsorry {
+  position: fixed;
+  background-color: #495159;
+  width: 50vw;
+  height: 40vh;
+  left: 25vw;
+  top: 0px;
+  -webkit-transition:height 2x;
+  transition:height 2s;
+}

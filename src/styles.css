@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+.wordwrap {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
+}
+
+.prim{
+  background-color:#FFD700;
+  text-align:center;
+  border: #FFD700;
+  border-radius:6px;
+  padding: 15px 32px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.prim:hover {
+  background-color: #998100; 
+  color: white;
+}
+
+.upvote{
+  height:35px;
+  width:35px;
+  background-color:#5fff5f;
+  text-align:center;
+  vertical-align:middle;
+  border-radius:4px;  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.upvote:hover{
+  background-color:#4db446;
+}
+
+.downvote{
+  height:35px;
+  width:35px;
+  background-color:#606;
+  text-align:center;
+  vertical-align:middle;
+  border-radius:4px;  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+body,
+html {
+  overflow: hidden;
+  height: 100%;
+  font-family: PT Sans;
+  text-align:center;
+  /*background-color: #495159;*/
+  /* background-color: #fff; */
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+*/
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}

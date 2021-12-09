@@ -1,0 +1,59 @@
+<div id="bg"></div>
+<div id="ghettoimsorry"></div>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="firebaseService.user | async; then authenticated else guest">
+  <!-- template will replace this div -->
+</div>
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <div class="welcome">
+  <h3>Welcome, Guest</h3>
+  <hr>
+  <p>Please login to get started.</p>
+  </div>
+  <!-- <button (click)="firebaseService.googleLogin()">
+        <i class="fa fa-google"></i> Connect Google
+    </button> -->
+
+</ng-template>
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div class="welcome" *ngIf="firebaseService.user | async as user">
+    <h3>{{ user.firstname }} {{user.lastname}}'s Profile</h3>
+    <hr>
+    <b>Email:</b> {{ user.email }}<br>
+    <b>User ID:</b> {{ user.uid}}
+  </div>
+
+  <h1>My Active Events</h1>
+<input type="text" [(ngModel)]="term" style="width:81vw;position:relative;left:10vw;" class="form-control" placeholder="Search for an event...">
+
+  <div id="eventsList">
+    <div *ngIf="events?.length > 0" class="container">
+      <div *ngFor="let event of events | filter:term" class="collection">
+        <div class="card mb-4" style="margin:20px;height:20vh;width:25vw; align:center;float:left;">
+            <div><b>{{event.name}}</b></div>
+          <br>
+          <table>
+              <tr>
+              <button class="upvote" (click)="likeUpdate(event)">🌟</button>
+               {{event.like}}
+              　　
+              <button class="downvote" (click)="dislikeUpdate(event)">💥</button>
+               {{event.dislike}}
+              </tr>
+         </table>
+         <br>
+         <button class="del" (click)="deleteEvent(event)">delete?</button>
+        </div>
+        </div>
+    </div>
+  </div>
+
+</ng-template>
